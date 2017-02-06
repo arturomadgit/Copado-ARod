@@ -374,14 +374,14 @@
     <members>standard__Chatter</members>
     <members>standard__Community</members>
     <members>standard__Content</members>
-    <members>standard__Insights</members>
+    <members>standard__LightningSalesConsole</members>
+    <members>standard__LightningService</members>
     <members>standard__Marketing</members>
     <members>standard__Platform</members>
     <members>standard__Sales</members>
     <members>standard__Service</members>
     <members>standard__ServiceConsole</members>
     <members>standard__Sites</members>
-    <members>standard__Work</members>
     <name>CustomApplication</name>
   </types>
   <types>
@@ -2762,6 +2762,11 @@
     <name>FieldSet</name>
   </types>
   <types>
+    <members>LightningSalesConsole_UtilityBar</members>
+    <members>LightningService_UtilityBar</members>
+    <name>FlexiPage</name>
+  </types>
+  <types>
     <members>DE Default</members>
     <name>HomePageLayout</name>
   </types>
@@ -2980,8 +2985,8 @@
     <name>MatchingRules</name>
   </types>
   <types>
-    <members>copado__Copado_User</members>
-    <members>copado__Encrypted_fields</members>
+    <members>Copado_User</members>
+    <members>Encrypted_fields</members>
     <name>PermissionSet</name>
   </types>
   <types>
@@ -3042,6 +3047,7 @@
     <members>NewNote</members>
     <members>NewOpportunity</members>
     <members>NewTask</members>
+    <members>SendEmail</members>
     <members>Task.Defer</members>
     <members>Task.Defer_0</members>
     <members>Task.EditDescription</members>
@@ -3136,7 +3142,6 @@
     <members>Forecasting</members>
     <members>Ideas</members>
     <members>Knowledge</members>
-    <members>LeadConvert</members>
     <members>LiveAgent</members>
     <members>Mobile</members>
     <members>Name</members>
