@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -135,31 +136,37 @@ TEXT(copado__Last_Status__c), 16, 16
                     <fullName>Queued</fullName>
                     <color>#BBBBBB</color>
                     <default>true</default>
+                    <label>Queued</label>
                 </value>
                 <value>
                     <fullName>Starting</fullName>
                     <color>#999999</color>
                     <default>false</default>
+                    <label>Starting</label>
                 </value>
                 <value>
                     <fullName>In Progress</fullName>
                     <color>#0B6FCE</color>
                     <default>false</default>
+                    <label>In Progress</label>
                 </value>
                 <value>
                     <fullName>Completed successfully</fullName>
                     <color>#009900</color>
                     <default>false</default>
+                    <label>Completed successfully</label>
                 </value>
                 <value>
                     <fullName>Completed with errors</fullName>
                     <color>#CC0000</color>
                     <default>false</default>
+                    <label>Completed with errors</label>
                 </value>
                 <value>
                     <fullName>Provider Failure</fullName>
                     <color>#FF6666</color>
                     <default>false</default>
+                    <label>Provider Failure</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -318,6 +325,7 @@ TEXT(copado__Last_Status__c), 16, 16
         <errorConditionFormula>NOT(ISBLANK(copado__Org_Credential__c)) &amp;&amp; NOT(ISBLANK(copado__Base_URL__c))</errorConditionFormula>
         <errorMessage>Base URL cannot be populated if Org Credentials were selected.</errorMessage>
     </validationRules>
+    <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Quick_Run</fullName>
         <availability>online</availability>

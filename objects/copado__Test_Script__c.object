@@ -47,6 +47,7 @@
     <description>The template test script.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -98,14 +99,17 @@
                 <value>
                     <fullName>Passed</fullName>
                     <default>false</default>
+                    <label>Passed</label>
                 </value>
                 <value>
                     <fullName>Passed with comments</fullName>
                     <default>false</default>
+                    <label>Passed with comments</label>
                 </value>
                 <value>
                     <fullName>Failed</fullName>
                     <default>false</default>
+                    <label>Failed</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -159,14 +163,17 @@
                 <value>
                     <fullName>Low</fullName>
                     <default>true</default>
+                    <label>Low</label>
                 </value>
                 <value>
                     <fullName>Medium</fullName>
                     <default>false</default>
+                    <label>Medium</label>
                 </value>
                 <value>
                     <fullName>High</fullName>
                     <default>false</default>
+                    <label>High</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -197,14 +204,17 @@
                 <value>
                     <fullName>Draft</fullName>
                     <default>true</default>
+                    <label>Draft</label>
                 </value>
                 <value>
                     <fullName>Ready for testing</fullName>
                     <default>false</default>
+                    <label>Ready for testing</label>
                 </value>
                 <value>
                     <fullName>Complete</fullName>
                     <default>false</default>
+                    <label>Complete</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -285,6 +295,7 @@
         <searchResultsAdditionalFields>copado__User_Story__c</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Add_Test_Script_Steps</fullName>
         <availability>online</availability>

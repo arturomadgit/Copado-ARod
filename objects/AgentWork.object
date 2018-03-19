@@ -42,6 +42,10 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>PendingServiceRoutingId</fullName>
         <type>Lookup</type>
     </fields>
@@ -55,8 +59,20 @@
         <fullName>RequestDateTime</fullName>
     </fields>
     <fields>
+        <fullName>RoutingModel</fullName>
+    </fields>
+    <fields>
+        <fullName>RoutingPriority</fullName>
+    </fields>
+    <fields>
+        <fullName>RoutingType</fullName>
+    </fields>
+    <fields>
         <fullName>ServiceChannelId</fullName>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ShouldSkipCapacityCheck</fullName>
     </fields>
     <fields>
         <fullName>SpeedToAnswer</fullName>
@@ -75,5 +91,5 @@
         <fullName>WorkItemId</fullName>
         <type>Lookup</type>
     </fields>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>Read</sharingModel>
 </CustomObject>

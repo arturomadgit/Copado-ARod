@@ -47,6 +47,7 @@
     <description>This object tracks the changes that are promoted to the next Salesforce instance.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -195,22 +196,27 @@
                 <value>
                     <fullName>Draft</fullName>
                     <default>true</default>
+                    <label>Draft</label>
                 </value>
                 <value>
                     <fullName>Scheduled</fullName>
                     <default>false</default>
+                    <label>Scheduled</label>
                 </value>
                 <value>
                     <fullName>In Progress</fullName>
                     <default>false</default>
+                    <label>In Progress</label>
                 </value>
                 <value>
                     <fullName>Completed</fullName>
                     <default>false</default>
+                    <label>Completed</label>
                 </value>
                 <value>
                     <fullName>Cancelled</fullName>
                     <default>false</default>
+                    <label>Cancelled</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -238,4 +244,5 @@
         <customTabListAdditionalFields>copado__Status__c</customTabListAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

@@ -47,6 +47,7 @@
     <description>The execution of the test script.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -267,22 +268,27 @@
                 <value>
                     <fullName>Ready for testing</fullName>
                     <default>true</default>
+                    <label>Ready for testing</label>
                 </value>
                 <value>
                     <fullName>In progress</fullName>
                     <default>false</default>
+                    <label>In progress</label>
                 </value>
                 <value>
                     <fullName>Passed</fullName>
                     <default>false</default>
+                    <label>Passed</label>
                 </value>
                 <value>
                     <fullName>Passed with comments</fullName>
                     <default>false</default>
+                    <label>Passed with comments</label>
                 </value>
                 <value>
                     <fullName>Failed</fullName>
                     <default>false</default>
+                    <label>Failed</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -344,18 +350,22 @@
                 <value>
                     <fullName>Developer</fullName>
                     <default>false</default>
+                    <label>Developer</label>
                 </value>
                 <value>
                     <fullName>Peer Review</fullName>
                     <default>false</default>
+                    <label>Peer Review</label>
                 </value>
                 <value>
                     <fullName>User Acceptance</fullName>
                     <default>false</default>
+                    <label>User Acceptance</label>
                 </value>
                 <value>
                     <fullName>Production</fullName>
                     <default>false</default>
+                    <label>Production</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -409,26 +419,32 @@
                 <value>
                     <fullName>Peer-Review</fullName>
                     <default>false</default>
+                    <label>Peer-Review</label>
                 </value>
                 <value>
                     <fullName>User Acceptance Testing</fullName>
                     <default>false</default>
+                    <label>User Acceptance Testing</label>
                 </value>
                 <value>
                     <fullName>Performance</fullName>
                     <default>false</default>
+                    <label>Performance</label>
                 </value>
                 <value>
                     <fullName>Regression</fullName>
                     <default>false</default>
+                    <label>Regression</label>
                 </value>
                 <value>
                     <fullName>Usability</fullName>
                     <default>false</default>
+                    <label>Usability</label>
                 </value>
                 <value>
                     <fullName>User Interface</fullName>
                     <default>false</default>
+                    <label>User Interface</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -476,6 +492,7 @@
         <customTabListAdditionalFields>copado__Overall_Test_Comments__c</customTabListAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Execute_Test_Run</fullName>
         <availability>online</availability>

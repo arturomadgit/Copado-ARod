@@ -47,6 +47,7 @@
     <description>The individual template step for a test script</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -106,14 +107,17 @@
                 <value>
                     <fullName>Passed</fullName>
                     <default>false</default>
+                    <label>Passed</label>
                 </value>
                 <value>
                     <fullName>Passed with comments</fullName>
                     <default>false</default>
+                    <label>Passed with comments</label>
                 </value>
                 <value>
                     <fullName>Failed</fullName>
                     <default>false</default>
+                    <label>Failed</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -151,4 +155,5 @@
     <pluralLabel>Test Script Steps</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

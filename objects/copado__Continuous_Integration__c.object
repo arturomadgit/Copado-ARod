@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -115,10 +116,12 @@
                 <value>
                     <fullName>Deploy all Files</fullName>
                     <default>true</default>
+                    <label>Deploy all Files</label>
                 </value>
                 <value>
                     <fullName>Deploy only Committed Files</fullName>
                     <default>false</default>
+                    <label>Deploy only Committed Files</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -201,10 +204,12 @@
                 <value>
                     <fullName>Run build task deployment only if pre deployment job is successful</fullName>
                     <default>true</default>
+                    <label>Run build task deployment only if pre deployment job is successful</label>
                 </value>
                 <value>
                     <fullName>Always run build task deployment</fullName>
                     <default>false</default>
+                    <label>Always run build task deployment</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -233,22 +238,27 @@
                 <value>
                     <fullName>Draft</fullName>
                     <default>true</default>
+                    <label>Draft</label>
                 </value>
                 <value>
                     <fullName>Pending</fullName>
                     <default>false</default>
+                    <label>Pending</label>
                 </value>
                 <value>
                     <fullName>In Progress</fullName>
                     <default>false</default>
+                    <label>In Progress</label>
                 </value>
                 <value>
                     <fullName>Success</fullName>
                     <default>false</default>
+                    <label>Success</label>
                 </value>
                 <value>
                     <fullName>Failed</fullName>
                     <default>false</default>
+                    <label>Failed</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -281,4 +291,5 @@
         <fullName>copado__ContinuousIntegrationPermission__c</fullName>
         <label>Continuous Integration Permission</label>
     </sharingReasons>
+    <visibility>Public</visibility>
 </CustomObject>

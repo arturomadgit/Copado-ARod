@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -115,18 +116,22 @@ TEXT(copado__Status__c)
                 <value>
                     <fullName>Queued</fullName>
                     <default>false</default>
+                    <label>Queued</label>
                 </value>
                 <value>
                     <fullName>In Progress</fullName>
                     <default>false</default>
+                    <label>In Progress</label>
                 </value>
                 <value>
                     <fullName>Completed with Errors</fullName>
                     <default>false</default>
+                    <label>Completed with Errors</label>
                 </value>
                 <value>
                     <fullName>Completed Successfully</fullName>
                     <default>false</default>
+                    <label>Completed Successfully</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -155,6 +160,7 @@ TEXT(copado__Status__c)
         <customTabListAdditionalFields>copado__Status_Icon__c</customTabListAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Refresh_Results</fullName>
         <availability>online</availability>

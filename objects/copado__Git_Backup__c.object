@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -79,18 +80,22 @@
                 <value>
                     <fullName>None</fullName>
                     <default>false</default>
+                    <label>None</label>
                 </value>
                 <value>
                     <fullName>Daily</fullName>
                     <default>false</default>
+                    <label>Daily</label>
                 </value>
                 <value>
                     <fullName>Weekly</fullName>
                     <default>false</default>
+                    <label>Weekly</label>
                 </value>
                 <value>
                     <fullName>Monthly</fullName>
                     <default>false</default>
+                    <label>Monthly</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -122,14 +127,17 @@
                 <value>
                     <fullName>Allow Snapshots &amp; Commits</fullName>
                     <default>true</default>
+                    <label>Allow Snapshots &amp; Commits</label>
                 </value>
                 <value>
                     <fullName>Allow Snapshots Only</fullName>
                     <default>false</default>
+                    <label>Allow Snapshots Only</label>
                 </value>
                 <value>
                     <fullName>Allow Commits Only</fullName>
                     <default>false</default>
+                    <label>Allow Commits Only</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -197,4 +205,5 @@
         <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

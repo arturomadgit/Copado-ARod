@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -162,4 +163,5 @@
         <errorDisplayField>copado__To_Org__c</errorDisplayField>
         <errorMessage>The Org&apos;s to be compared can not be the same.</errorMessage>
     </validationRules>
+    <visibility>Public</visibility>
 </CustomObject>

@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
@@ -126,14 +127,17 @@
                 <value>
                     <fullName>None</fullName>
                     <default>true</default>
+                    <label>None</label>
                 </value>
                 <value>
                     <fullName>OK</fullName>
                     <default>false</default>
+                    <label>OK</label>
                 </value>
                 <value>
                     <fullName>Error</fullName>
                     <default>false</default>
+                    <label>Error</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -163,14 +167,17 @@
                 <value>
                     <fullName>None</fullName>
                     <default>true</default>
+                    <label>None</label>
                 </value>
                 <value>
                     <fullName>OK</fullName>
                     <default>false</default>
+                    <label>OK</label>
                 </value>
                 <value>
                     <fullName>Error</fullName>
                     <default>false</default>
+                    <label>Error</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -228,10 +235,12 @@
                 <value>
                     <fullName>Production/Developer</fullName>
                     <default>true</default>
+                    <label>Production/Developer</label>
                 </value>
                 <value>
                     <fullName>Sandbox</fullName>
                     <default>false</default>
+                    <label>Sandbox</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -289,18 +298,22 @@
                 <value>
                     <fullName>None</fullName>
                     <default>false</default>
+                    <label>None</label>
                 </value>
                 <value>
                     <fullName>Daily</fullName>
                     <default>false</default>
+                    <label>Daily</label>
                 </value>
                 <value>
                     <fullName>Weekly</fullName>
                     <default>false</default>
+                    <label>Weekly</label>
                 </value>
                 <value>
                     <fullName>Monthly</fullName>
                     <default>false</default>
+                    <label>Monthly</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -400,6 +413,7 @@
     </searchLayouts>
     <sharingModel>Private</sharingModel>
     <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Add_to_Deployment</fullName>
         <availability>online</availability>

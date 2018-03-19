@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
@@ -162,18 +163,22 @@ copado__SUM_Deployed__c / copado__Step_Count__c,
                 <value>
                     <fullName>Not started</fullName>
                     <default>true</default>
+                    <label>Not started</label>
                 </value>
                 <value>
                     <fullName>In Progress</fullName>
                     <default>false</default>
+                    <label>In Progress</label>
                 </value>
                 <value>
                     <fullName>Completed Successfully</fullName>
                     <default>false</default>
+                    <label>Completed Successfully</label>
                 </value>
                 <value>
                     <fullName>Completed with Errors</fullName>
                     <default>false</default>
+                    <label>Completed with Errors</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -235,4 +240,5 @@ copado__SUM_Deployed__c / copado__Step_Count__c,
     <pluralLabel>Destination Orgs</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

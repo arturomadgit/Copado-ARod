@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
@@ -107,18 +108,22 @@
                 <value>
                     <fullName>Pending</fullName>
                     <default>false</default>
+                    <label>Pending</label>
                 </value>
                 <value>
                     <fullName>Success</fullName>
                     <default>false</default>
+                    <label>Success</label>
                 </value>
                 <value>
                     <fullName>Failed</fullName>
                     <default>false</default>
+                    <label>Failed</label>
                 </value>
                 <value>
                     <fullName>In progress</fullName>
                     <default>false</default>
+                    <label>In progress</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -169,18 +174,22 @@
                 <value>
                     <fullName>Pending</fullName>
                     <default>true</default>
+                    <label>Pending</label>
                 </value>
                 <value>
                     <fullName>Success</fullName>
                     <default>false</default>
+                    <label>Success</label>
                 </value>
                 <value>
                     <fullName>Failed</fullName>
                     <default>false</default>
+                    <label>Failed</label>
                 </value>
                 <value>
                     <fullName>In progress</fullName>
                     <default>false</default>
+                    <label>In progress</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -242,4 +251,5 @@
         <lookupDialogsAdditionalFields>copado__Step__c</lookupDialogsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

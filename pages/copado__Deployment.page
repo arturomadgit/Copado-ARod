@@ -62,9 +62,9 @@ window,"sortable");</script>
 </div>
 
 <div style="display:none;">
-    <apex:pageMessage title="{!$Label.copado__WARNING}" summary="__MSG__" severity="warning" strength="3" id="js-msg-WARNING" />
-    <apex:pageMessage title="{!$Label.copado__SUCCESS}" summary="__MSG__" severity="confirm" strength="3" id="js-msg-CONFIRM" />
-    <apex:pageMessage title="{!$Label.copado__ERROR}" summary="__MSG__" severity="error" strength="3" id="js-msg-ERROR" />
+    <apex:pageMessage title="{!$Label.copado__warning}" summary="__MSG__" severity="warning" strength="3" id="js-msg-WARNING" />
+    <apex:pageMessage title="{!$Label.copado__success}" summary="__MSG__" severity="confirm" strength="3" id="js-msg-CONFIRM" />
+    <apex:pageMessage title="{!$Label.copado__error}" summary="__MSG__" severity="error" strength="3" id="js-msg-ERROR" />
 </div>
 
 
@@ -98,6 +98,7 @@ window,"sortable");</script>
 
     $copado( document ).ready(function() {
         deploymentStreamingService.ns = copadoApp.ns;
+        copadoStreamingService.ns = copadoApp.ns;
         copadoStreamingService.init();
         $copado.cometd.subscribe('/topic/CopadoNotifications', function(message) {
             console.info('Push message: ', message);
@@ -121,7 +122,7 @@ window,"sortable");</script>
 <div id="body">
     <c:IframeLocker url="/apex/deploymentStatus?id={!dep.Id}" />
 
-    <apex:sectionHeader id="sectionHeader" title="{!$ObjectType.copado__Deployment__c.Label} {!$Label.copado__EDIT}" subtitle="{!IF(ISBLANK(dep.Name),$Label.copado__NEW+' '+ $ObjectType.copado__Deployment__c.Label ,dep.Name)}" />
+    <apex:sectionHeader id="sectionHeader" title="{!$ObjectType.copado__Deployment__c.Label} {!$Label.copado__edit}" subtitle="{!IF(ISBLANK(dep.Name),$Label.copado__new+' '+ $ObjectType.copado__Deployment__c.Label ,dep.Name)}" />
         <!--a href="#" onClick="copadoApp.toggleChatter();" style="float:right;margin-top:-35px;    " >Chatter</a-->
 
 
@@ -139,9 +140,9 @@ window,"sortable");</script>
                         <apex:pageBlockButtons id="pbbInfo" location="top">
                             <apex:commandButton id="btnDeploymentSave" value="{!$Label.site.save}"  onclick="copadoApp.dirty=false;" action="{!saveDeployment}" rerender="pbInformation,msg,pJSConfig" />
                             <apex:commandButton id="btnDeploymentCancel" value="{!$Label.site.cancel}" action="{!cancel}" onclick="copadoApp.cancel();return false;"/>
-                             <apex:commandButton id="btnDeploymentDelete" action="{!delete}" value="{!$Label.copado__DELETE}" onclick="return confirm(copadoLabels.ARE_YOU_SURE);"/>
-                            <apex:commandButton id="btnDeploymentClone" action="{!URLFOR($Action.Deployment__c.Clone,dep.Id)}" value="{!$Label.copado__CLONE}" rerender="pbInformation" disabled="{!ISBLANK(dep.Id)}"/>
-                            <apex:commandButton id="btnDeploymentShare" action="{!URLFOR($Action.Deployment__c.Share,dep.Id)}" value="{!$Label.copado__SHARE}" disabled="{!ISBLANK(dep.Id)}"/>
+                             <apex:commandButton id="btnDeploymentDelete" action="{!delete}" value="{!$Label.copado__delete}" onclick="return confirm(copadoLabels.ARE_YOU_SURE);"/>
+                            <apex:commandButton id="btnDeploymentClone" action="{!URLFOR($Action.Deployment__c.Clone,dep.Id)}" value="{!$Label.copado__clone}" rerender="pbInformation" disabled="{!ISBLANK(dep.Id)}"/>
+                            <apex:commandButton id="btnDeploymentShare" action="{!URLFOR($Action.Deployment__c.Share,dep.Id)}" value="{!$Label.copado__share}" disabled="{!ISBLANK(dep.Id)}"/>
                         </apex:pageBlockButtons>
                     <apex:pageBlockSection id="pbs_pbi1" columns="2">
 
@@ -181,7 +182,7 @@ window,"sortable");</script>
                                 <div class="">
                                     <c:OrgStatusIcons id="cmpOrgStatusIconsToOrg" pdestination="{!destination}" />
 
-                                    <a href="#"  onclick="copadoApp.lock(); deleteDestOrg('{!destination.copado__To_Org__c}')"><span>{!$Label.copado__DELETE}</span></a>
+                                    <a href="#"  onclick="copadoApp.lock(); deleteDestOrg('{!destination.copado__To_Org__c}')"><span>{!$Label.copado__delete}</span></a>
                                 </div>
                             </apex:outputPanel>
 
@@ -230,10 +231,10 @@ window,"sortable");</script>
 
                     </apex:pageBlockSection>
                     <apex:outputPanel id="pnlMsgSaveDeployment" layout="block" rendered="{!ISBLANK(dep.Id)}">
-                            <center><i class="empty-msg">{!$Label.copado__SAVE_DEPLOYMENT_TO_ADD_DESTINATION_ORGS}</i></center>
+                            <center><i class="empty-msg">{!$Label.copado__save_deployment_to_add_destination_orgs}</i></center>
                     </apex:outputPanel>
 
-                    <apex:pageBlockSection columns="1" title="{!$Label.copado__OTHER_INFORMATION}" rendered="{!showOtherInformation}">
+                    <apex:pageBlockSection columns="1" title="{!$Label.copado__other_information}" rendered="{!showOtherInformation}">
                       <apex:repeat value="{!$ObjectType.copado__Deployment__c.FieldSets.copado__CustomFields}" var="f">
                           <apex:inputField value="{!copado__Deployment__c[f]}" required="{!OR(f.required, f.dbrequired)}"/>
                       </apex:repeat>
@@ -245,8 +246,8 @@ window,"sortable");</script>
 
                 <apex:pageblock title="Status" id="pbStatus" >
                     <apex:pageBlockButtons id="pbbStatus" location="top">
-                        <apex:commandButton value="{!$Label.copado__DEPLOY}" onclick="copadoApp.deploy();return false;" id="btnDeploy"/>
-                        <apex:commandButton value="{!$Label.copado__CANCEL_DEPLOYMENT}" onclick="copadoApp.cancelDeploy();return false;" id="btnCancelDeploy"/>
+                        <apex:commandButton value="{!$Label.copado__deploy}" onclick="copadoApp.deploy();return false;" id="btnDeploy"/>
+                        <apex:commandButton value="{!$Label.copado__cancel_deployment}" onclick="copadoApp.cancelDeploy();return false;" id="btnCancelDeploy"/>
                         <input id="btnViewStatus" type="button" class="btn" style="display:none" value="{!$Label.VIEW_DEPLOYMENT_STATUS}" onclick="openIframeBox()" />
                         <button id="btnShowHookUrl" value="Show Hook URL" onclick="showWebhook(); return false;">Show Hook URL</button>
                     </apex:pageBlockButtons>
@@ -323,7 +324,7 @@ window,"sortable");</script>
                                     <option value="Data">{!$Label.STEP_TYPE_DATA}</option>
                                     <option value="Bulk Data">{!$Label.STEP_TYPE_BULK_DATA}</option>
                                     <option value="Delete MetaData">{!$Label.STEP_TYPE_DELETE_METADATA}</option>
-                                    <option value="Custom Settings">{!$Label.copado__STEP_TYPE_CUSTOM_SETTINGS}</option>
+                                    <option value="Custom Settings">{!$Label.copado__step_type_custom_settings}</option>
                                     <option value="Apex">{!$Label.STEP_TYPE_APEX}</option>
                                     <option value="Manual Task">{!$Label.STEP_TYPE_MANUAL_TASK}</option>
                                     <option value="Git MetaData">{!$Label.STEP_TYPE_GIT_METADATA}</option>

@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
@@ -104,14 +105,17 @@
                 <value>
                     <fullName>Created</fullName>
                     <default>false</default>
+                    <label>Created</label>
                 </value>
                 <value>
                     <fullName>Updated</fullName>
                     <default>false</default>
+                    <label>Updated</label>
                 </value>
                 <value>
                     <fullName>Deleted</fullName>
                     <default>false</default>
+                    <label>Deleted</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -155,14 +159,17 @@
                 <value>
                     <fullName>Deployment</fullName>
                     <default>false</default>
+                    <label>Deployment</label>
                 </value>
                 <value>
                     <fullName>Step</fullName>
                     <default>false</default>
+                    <label>Step</label>
                 </value>
                 <value>
                     <fullName>Destination Org</fullName>
                     <default>false</default>
+                    <label>Destination Org</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -202,4 +209,5 @@
     <pluralLabel>Copado Deployment History</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

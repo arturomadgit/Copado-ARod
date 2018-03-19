@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
@@ -79,10 +80,12 @@
                 <value>
                     <fullName>Git Commit</fullName>
                     <default>false</default>
+                    <label>Git Commit</label>
                 </value>
                 <value>
                     <fullName>Salesforce Org</fullName>
                     <default>false</default>
+                    <label>Salesforce Org</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -146,10 +149,12 @@
                 <value>
                     <fullName>Git Commit</fullName>
                     <default>false</default>
+                    <label>Git Commit</label>
                 </value>
                 <value>
                     <fullName>Salesforce Org</fullName>
                     <default>false</default>
+                    <label>Salesforce Org</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -198,4 +203,5 @@
         <customTabListAdditionalFields>copado__Destination_Org_Credential__c</customTabListAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

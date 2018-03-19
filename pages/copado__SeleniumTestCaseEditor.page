@@ -2,7 +2,7 @@
 
     <c:GAnalytics />
     <div style="display: none">
-        <apex:outputText value="{!$Setup.copado__Personal_Settings__c.copado__API_Key__c}" id="api_key"/>
+        <apex:outputText value="{!APIKey}" id="api_key"/>
         <script type="text/javascript">
         	var copado_api_key = document.getElementById('{!$Component.api_key}').innerText;
         </script>
@@ -21,7 +21,7 @@
 	<apex:stylesheet value="{!$Setup.copado__Settings__c.copado__Server_URL__c}/selenium-ide/copado-ide.css"/>
     <apex:includeScript value="{!$Setup.copado__Settings__c.copado__Server_URL__c}/selenium-ide/copado-ide-all.js"/>
 
-    <apex:pageMessage severity="WARNING" strength="2" summary="{!$Label.copado__SELENIUM_NOT_ENABLED}" rendered="{!!and($Setup.copado__Settings__c.copado__Enabled_Multi_Licenses__c, $Setup.copado__Copado_License__c.copado__Enable_CST__c)}"></apex:pageMessage>
+    <apex:pageMessage severity="WARNING" strength="2" summary="{!$Label.copado__selenium_not_enabled}" rendered="{!!and($Setup.copado__Settings__c.copado__Enabled_Multi_Licenses__c, $Setup.copado__Copado_License__c.copado__Enable_CST__c)}"></apex:pageMessage>
     <div id="CopadoRecorderBody">
     </div>
 	

@@ -47,6 +47,7 @@
     <description>This object stores the individual commits to a Git repository executed by Copado Deployer.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -134,14 +135,17 @@
                 <value>
                     <fullName>Complete</fullName>
                     <default>false</default>
+                    <label>Complete</label>
                 </value>
                 <value>
                     <fullName>No changes</fullName>
                     <default>false</default>
+                    <label>No changes</label>
                 </value>
                 <value>
                     <fullName>In progress</fullName>
                     <default>false</default>
+                    <label>In progress</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -160,4 +164,5 @@
         <lookupDialogsAdditionalFields>copado__Status__c</lookupDialogsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

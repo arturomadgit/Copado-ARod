@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
+        <actionName>AddCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>AddToCampaign</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -182,14 +186,17 @@
                 <value>
                     <fullName>Secondary</fullName>
                     <default>false</default>
+                    <label>Secondary</label>
                 </value>
                 <value>
                     <fullName>Tertiary</fullName>
                     <default>false</default>
+                    <label>Tertiary</label>
                 </value>
                 <value>
                     <fullName>Primary</fullName>
                     <default>false</default>
+                    <label>Primary</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

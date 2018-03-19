@@ -23,17 +23,17 @@
         </style>
     </head>
     <apex:form id="theForm" >
-        <apex:sectionHeader title="{!$ObjectType.copado__Deployment__c.LabelPlural}" subtitle="{!$Label.copado__HEADER_CREATE_DEPLOYMENT}" description="{!$Label.copado__HEADER_DESC_CREATE_DEPLOYMENT}" rendered="{!step_createDeployment}" />
-        <apex:sectionHeader title="{!$ObjectType.copado__Deployment__c.LabelPlural}" subtitle="{!$Label.copado__HEADER_CREATE_STEP}" description="{!$Label.copado__HEADER_DESC_CREATE_STEP}" rendered="{!step_addStep}" />
-        <apex:sectionHeader title="{!$ObjectType.copado__Deployment__c.LabelPlural}" subtitle="{!$Label.copado__HEADER_SELECT_DEST_ORGS}" description="{!$Label.copado__HEADER_DESC_SELECT_DEST_ORGS}" rendered="{!step_selectDestinationOrgs}" />
-        <apex:sectionHeader title="{!$ObjectType.copado__Deployment__c.LabelPlural}" subtitle="{!$Label.copado__HEADER_SETUP_SCHEDULE}" description="{!$Label.copado__HEADER_DESC_SETUP_SCHEDULE}" rendered="{!AND(step_setupSchedule,NOT(ui2))}" />
+        <apex:sectionHeader title="{!$ObjectType.copado__Deployment__c.LabelPlural}" subtitle="{!$Label.copado__header_create_deployment}" description="{!$Label.copado__header_desc_create_deployment}" rendered="{!step_createDeployment}" />
+        <apex:sectionHeader title="{!$ObjectType.copado__Deployment__c.LabelPlural}" subtitle="{!$Label.copado__header_create_step}" description="{!$Label.copado__header_desc_create_step}" rendered="{!step_addStep}" />
+        <apex:sectionHeader title="{!$ObjectType.copado__Deployment__c.LabelPlural}" subtitle="{!$Label.copado__header_select_dest_orgs}" description="{!$Label.copado__header_desc_select_dest_orgs}" rendered="{!step_selectDestinationOrgs}" />
+        <apex:sectionHeader title="{!$ObjectType.copado__Deployment__c.LabelPlural}" subtitle="{!$Label.copado__header_setup_schedule}" description="{!$Label.copado__header_desc_setup_schedule}" rendered="{!AND(step_setupSchedule,NOT(ui2))}" />
         
         <apex:pageMessages />
         
-        <apex:pageBlock id="pb_createDeployment" rendered="{!step_createDeployment}" mode="edit" helpUrl="http://docs.copa.do" helpTitle="{!$Label.copado__HELP_FOR_THIS_PAGE}">
+        <apex:pageBlock id="pb_createDeployment" rendered="{!step_createDeployment}" mode="edit" helpUrl="http://www.copa.do/cms/documentation" helpTitle="{!$Label.copado__help_for_this_page}">
             <apex:pageblockButtons >
-                <apex:commandButton value="{!$Label.copado__CLOSE}" styleClass="btn" action="{!cancel}" />
-                <apex:commandButton value="{!$Label.copado__NEXT}" styleClass="btnImportant" action="{!save_deployment}" />
+                <apex:commandButton value="{!$Label.copado__close}" styleClass="btn" action="{!cancel}" />
+                <apex:commandButton value="{!$Label.copado__next}" styleClass="btnImportant" action="{!save_deployment}" />
             </apex:pageblockButtons>
             <apex:pageBlockSection columns="1">
                 <apex:inputField value="{!copado__Deployment__c.Name}" required="true"/>
@@ -41,7 +41,7 @@
                 <apex:inputField value="{!copado__Deployment__c.copado__Status__c}" rendered="false"/>
                 <apex:inputField value="{!copado__Deployment__c.copado__Send_Deployment_Complete_email__c}" />
             </apex:pageBlockSection>
-            <apex:pageBlockSection columns="2" title="{!$Label.copado__OTHER_INFORMATION}" rendered="{!showOtherInformation}">
+            <apex:pageBlockSection columns="2" title="{!$Label.copado__other_information}" rendered="{!showOtherInformation}">
               <apex:repeat value="{!$ObjectType.copado__Deployment__c.FieldSets.copado__CustomFields}" var="f"> 
                   <apex:inputField value="{!copado__Deployment__c[f]}" required="{!OR(f.required, f.dbrequired)}"/>
               </apex:repeat>
@@ -54,7 +54,7 @@
             </script>
         </apex:pageBlock>
         
-        <apex:pageBlock id="pb_addStep" rendered="{!step_addStep}" mode="edit" helpUrl="http://docs.copa.do" helpTitle="{!$Label.copado__HELP_FOR_THIS_PAGE}">
+        <apex:pageBlock id="pb_addStep" rendered="{!step_addStep}" mode="edit" helpUrl="http://www.copa.do/cms/documentation" helpTitle="{!$Label.copado__help_for_this_page}">
 
            
             <script language="javascript">
@@ -78,27 +78,27 @@
             </script>
             
             <apex:pageblockButtons >
-                <apex:commandButton value="{!$Label.copado__BACK}" action="{!goto_createDeployment}" rendered="{!NOT(step_Step_edit)}" />
-                <apex:commandButton value="{!$Label.copado__CLOSE}" styleClass="btn" action="{!cancel}" />
-                <apex:commandButton value="{!$Label.copado__NEW} Step" action="{!newStep}" rendered="{!NOT(step_Step_edit)}"  />
+                <apex:commandButton value="{!$Label.copado__back}" action="{!goto_createDeployment}" rendered="{!NOT(step_Step_edit)}" />
+                <apex:commandButton value="{!$Label.copado__close}" styleClass="btn" action="{!cancel}" />
+                <apex:commandButton value="{!$Label.copado__new} Step" action="{!newStep}" rendered="{!NOT(step_Step_edit)}"  />
                 <apex:commandButton value="{!$Label.site.save}"  onclick="return rock.saveStep();" rerender="opDummy" rendered="{!step_Step_edit}"/>
                 <apex:commandButton value="{!$Label.site.cancel}" action="{!goto_addStep}" rendered="{!step_Step_edit}" immediate="true" rerender="pb_addStep,pbs_metadata, pbs_data,pbs_step" />
                 <apex:actionFunction name="goto_addStepJS" action="{!goto_addStep}" />
-                <apex:commandButton value="{!$Label.copado__NEXT}" styleClass="btnImportant" action="{!goto_selectDestinationOrgs}" rendered="{!NOT(step_Step_edit)}" />
+                <apex:commandButton value="{!$Label.copado__next}" styleClass="btnImportant" action="{!goto_selectDestinationOrgs}" rendered="{!NOT(step_Step_edit)}" />
             </apex:pageblockButtons>
             
-            <apex:pageMessage rendered="{!AND(NOT(hasSteps), NOT(step_Step_edit))}" severity="INFO" strength="2" summary="{!$Label.copado__NO_STEPS_IN_DEPLOYMENT}" /> 
+            <apex:pageMessage rendered="{!AND(NOT(hasSteps), NOT(step_Step_edit))}" severity="INFO" strength="2" summary="{!$Label.copado__no_steps_in_deployment}" /> 
 
             <apex:pageBlockTable id="stepsTable" value="{!steps}" var="s" rendered="{!AND(hasSteps, NOT(step_Step_edit))}">
                 <apex:column styleClass="col1commands">
                     <apex:facet name="header">
                     </apex:facet>
-                    <apex:commandLink value="{!$Label.copado__DELETE}" action="{!deleteStep}" reRender="stepsTable">
+                    <apex:commandLink value="{!$Label.copado__delete}" action="{!deleteStep}" reRender="stepsTable">
                          <apex:param name="selectedStep" assignTo="{!selectedStep}" value="{!s.id}"/>
                     </apex:commandLink>
                 </apex:column>
                 <apex:column styleClass="col1commands" style="width:80px">
-                    <apex:facet name="header">{!$Label.copado__REORDER_STEPS}</apex:facet>
+                    <apex:facet name="header">{!$Label.copado__reorder_steps}</apex:facet>
                     <apex:outputPanel >
                         <apex:image url="{!URLFOR($Resource.copado__arrow_empty)}" rendered="{!s.copado__Order__c == 1}"/>
                         <apex:commandLink action="{!moveUp}" reRender="stepsTable,theForm" rendered="{!s.copado__Order__c != 1}">
@@ -188,7 +188,7 @@
                                    (type === 'MetaData'|| type === 'Delete MetaData'|| type === 'Full Profiles'|| type === 'Full Permission Sets'|| type === 'Translations') && rock.getSelectedObj();
                                    if((type === 'MetaData'|| type === 'Delete MetaData'|| type === 'Full Profiles'|| type === 'Full Permission Sets'|| type === 'Translations') &&
                                       !rock.selectedNames.length){
-                                        alert('{!$Label.copado__SPECIFY_AT_LEAST_ONE_ITEM_TO_DEPLOY}');
+                                        alert('{!$Label.copado__specify_at_least_one_item_to_deploy}');
                                         return false;
                                    }
                                    if((type === 'Data' || type === 'Bulk Data') &&
@@ -196,7 +196,7 @@
                                        !dw.qb.queryTested || 
                                        !dw.qb.externalId )
                                        ){
-                                        alert('{!$Label.copado__MUST_BUILD_VALID_AND_TESTED_QUERY}');
+                                        alert('{!$Label.copado__must_build_valid_and_tested_query}');
                                         return false; 
                                    }
                                    
@@ -318,14 +318,14 @@
             </apex:pageBlockSection>
         </apex:pageBlock>
         
-        <apex:pageBlock id="pb_selectDestinationOrgs" rendered="{!step_selectDestinationOrgs}" mode="edit" helpUrl="http://docs.copa.do" helpTitle="{!$Label.copado__HELP_FOR_THIS_PAGE}">
+        <apex:pageBlock id="pb_selectDestinationOrgs" rendered="{!step_selectDestinationOrgs}" mode="edit" helpUrl="http://www.copa.do/cms/documentation" helpTitle="{!$Label.copado__help_for_this_page}">
             <apex:pageblockButtons >
-                <apex:commandButton value="{!$Label.copado__BACK}" action="{!goto_addStep}" rendered="{!NOT(step_DestOrg_edit)}" />
-                <apex:commandButton value="{!$Label.copado__CLOSE}" styleClass="btn" action="{!cancel}" />
-                <apex:commandButton value="{!$Label.copado__NEW} Destination Org" action="{!newDestOrg}" rendered="{!NOT(step_DestOrg_edit)}" />
+                <apex:commandButton value="{!$Label.copado__back}" action="{!goto_addStep}" rendered="{!NOT(step_DestOrg_edit)}" />
+                <apex:commandButton value="{!$Label.copado__close}" styleClass="btn" action="{!cancel}" />
+                <apex:commandButton value="{!$Label.copado__new} Destination Org" action="{!newDestOrg}" rendered="{!NOT(step_DestOrg_edit)}" />
                 <apex:commandButton value="{!$Label.site.cancel}" action="{!goto_selectDestinationOrgs}" rendered="{!step_DestOrg_edit}" immediate="true" />
                 <apex:commandButton value="{!$Label.site.save}" action="{!saveDestOrg}" rendered="{!step_DestOrg_edit}" />
-                <apex:commandButton value="{!$Label.copado__NEXT}" styleClass="btnImportant" action="{!goto_setupSchedule}" rendered="{!NOT(step_DestOrg_edit)}" />
+                <apex:commandButton value="{!$Label.copado__next}" styleClass="btnImportant" action="{!goto_setupSchedule}" rendered="{!NOT(step_DestOrg_edit)}" />
             </apex:pageblockButtons>
             <script>
                 ga('send', 'pageview', {
@@ -334,13 +334,13 @@
                 });
                 </script>
             
-            <apex:pageMessage rendered="{!AND(NOT(hasDestOrgs), NOT(step_DestOrg_edit))}" severity="INFO" strength="2" summary="{!$Label.copado__NO_DESTINATION_ORGS_IN_DEPLOYMENT}" />
+            <apex:pageMessage rendered="{!AND(NOT(hasDestOrgs), NOT(step_DestOrg_edit))}" severity="INFO" strength="2" summary="{!$Label.copado__no_destination_orgs_in_deployment}" />
             
             <apex:pageBlockTable value="{!destinationOrgs}" var="d" rendered="{!AND(hasDestOrgs, NOT(step_DestOrg_edit))}">
                 <apex:column styleClass="col1commands">
                     <apex:facet name="header">
                     </apex:facet>
-                    <apex:commandLink value="{!$Label.copado__DELETE}" action="{!deleteDestOrg}" reRender="pb_selectDestinationOrgs">
+                    <apex:commandLink value="{!$Label.copado__delete}" action="{!deleteDestOrg}" reRender="pb_selectDestinationOrgs">
                          <apex:param name="selectedDestOrg" assignTo="{!selectedDestOrg}" value="{!d.id}"/>
                     </apex:commandLink>
                 </apex:column>
@@ -357,7 +357,7 @@
         <!-- Show the component in the final setup schedule screen with the pb_setupSchedule -->
         <c:credits id="cmp_credits" rendered="{!step_setupSchedule}" />
         
-        <apex:pageBlock id="pb_setupSchedule" rendered="{!step_setupSchedule}" mode="edit" helpUrl="http://docs.copa.do" helpTitle="{!$Label.copado__HELP_FOR_THIS_PAGE}">
+        <apex:pageBlock id="pb_setupSchedule" rendered="{!step_setupSchedule}" mode="edit" helpUrl="http://www.copa.do/cms/documentation" helpTitle="{!$Label.copado__help_for_this_page}">
             
             <script>
                 ga('send', 'pageview', {
@@ -366,13 +366,13 @@
                 });
                 </script>
             <apex:pageblockButtons >
-                <apex:commandButton value="{!$Label.copado__BACK}" action="{!goto_selectDestinationOrgs}" immediate="true" rendered="{!NOT(ui2)}"/>
-                <apex:commandButton value="{!$Label.copado__CLOSE}" styleClass="btn" action="{!cancel}" />
-                <apex:commandButton value="{!$Label.copado__DEPLOY_ALL}" action="{!confirmAll}" styleClass="btnImportant" />
-                <apex:commandButton value="{!$Label.copado__DEPLOY_OUTSTANDING}" action="{!confirmOutstanding}" styleClass="btnImportant" />
+                <apex:commandButton value="{!$Label.copado__back}" action="{!goto_selectDestinationOrgs}" immediate="true" rendered="{!NOT(ui2)}"/>
+                <apex:commandButton value="{!$Label.copado__close}" styleClass="btn" action="{!cancel}" />
+                <apex:commandButton value="{!$Label.copado__deploy_all}" action="{!confirmAll}" styleClass="btnImportant" />
+                <apex:commandButton value="{!$Label.copado__deploy_outstanding}" action="{!confirmOutstanding}" styleClass="btnImportant" />
             </apex:pageblockButtons>
             
-            <apex:pageBlockSection columns="1" collapsible="false" title="{!$Label.copado__DEPLOY_NOW_OR_LATER}">
+            <apex:pageBlockSection columns="1" collapsible="false" title="{!$Label.copado__deploy_now_or_later}">
                 <apex:actionRegion id="ar_schedule">
                     <apex:outputPanel ><apex:inputField id="if_schedule" required="true" value="{!copado__Deployment__c.copado__Schedule__c}" onchange="validateDate()" styleClass="js-estimation-schedule"/>
                     <apex:inputField id="if_date" value="{!copado__Deployment__c.copado__Date__c}" rendered="{!showDateField}" />
@@ -399,12 +399,12 @@
                         <apex:outputField value="{!est.step.copado__CheckOnly__c}"/>
                         <apex:facet name="footer">
                             <apex:outputPanel >
-                                <apex:outputText value="{!$Label.copado__TOTAL_CREDITS_ESTIMATED}"/>
+                                <apex:outputText value="{!$Label.copado__total_credits_estimated}"/>
                             </apex:outputPanel>
                         </apex:facet>
                     </apex:column>
                     <apex:column width="100px" style="text-align:right;">
-                        <apex:facet name="header">Total {!$Label.copado__CREDITS}</apex:facet>
+                        <apex:facet name="header">Total {!$Label.copado__credits}</apex:facet>
                         <apex:outputText value="{!est.credits}"/>
                         <apex:facet name="footer">
                             <apex:outputPanel >
@@ -413,7 +413,7 @@
                         </apex:facet>
                     </apex:column>
                     <apex:column width="100px" style="text-align:right;">
-                        <apex:facet name="header">Outstanding {!$Label.copado__CREDITS}</apex:facet>
+                        <apex:facet name="header">Outstanding {!$Label.copado__credits}</apex:facet>
                         <apex:outputText value="{!est.outstandingCredits}"/>
                         <apex:facet name="footer">
                             <apex:outputPanel >
@@ -423,7 +423,7 @@
                     </apex:column>
                 </apex:pageBlockTable>
                 <apex:outputPanel >
-                <apex:commandLink styleClass="js-estimation-refresh" action="{!refreshEstimations}" value="{!$Label.copado__REFRESH}" rerender="pb_sched,tb_est,est_totals" status="refreshStatus" />
+                <apex:commandLink styleClass="js-estimation-refresh" action="{!refreshEstimations}" value="{!$Label.copado__refresh}" rerender="pb_sched,tb_est,est_totals" status="refreshStatus" />
                 <apex:actionStatus id="refreshStatus">
                     <apex:facet name="start">
                         <img class="waitingImage" src="/img/loading.gif" />

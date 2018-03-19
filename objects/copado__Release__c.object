@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -98,18 +99,22 @@
                 <value>
                     <fullName>Draft</fullName>
                     <default>false</default>
+                    <label>Draft</label>
                 </value>
                 <value>
                     <fullName>Planned</fullName>
                     <default>false</default>
+                    <label>Planned</label>
                 </value>
                 <value>
                     <fullName>Released</fullName>
                     <default>false</default>
+                    <label>Released</label>
                 </value>
                 <value>
                     <fullName>Cancelled</fullName>
                     <default>false</default>
+                    <label>Cancelled</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -122,6 +127,7 @@
     <pluralLabel>Releases</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
     <webLinks>
         <fullName>copado__Mass_add_to_Release</fullName>
         <availability>online</availability>

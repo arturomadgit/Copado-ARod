@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
@@ -77,18 +78,22 @@
                 <value>
                     <fullName>Potential Conflict</fullName>
                     <default>false</default>
+                    <label>Potential Conflict</label>
                 </value>
                 <value>
                     <fullName>Under Review</fullName>
                     <default>false</default>
+                    <label>Under Review</label>
                 </value>
                 <value>
                     <fullName>Conflict Resolved</fullName>
                     <default>false</default>
+                    <label>Conflict Resolved</label>
                 </value>
                 <value>
                     <fullName>On Hold</fullName>
                     <default>false</default>
+                    <label>On Hold</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -127,4 +132,5 @@
     <pluralLabel>User Story Metadata</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>

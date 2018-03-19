@@ -46,6 +46,7 @@
     <deprecated>false</deprecated>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableEnhancedLookup>false</enableEnhancedLookup>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
@@ -341,18 +342,22 @@ copado__SUM_Deployed__c / copado__Org_Count__c,
                 <value>
                     <fullName>Not started</fullName>
                     <default>true</default>
+                    <label>Not started</label>
                 </value>
                 <value>
                     <fullName>In progress</fullName>
                     <default>false</default>
+                    <label>In progress</label>
                 </value>
                 <value>
                     <fullName>Completed Successfully</fullName>
                     <default>false</default>
+                    <label>Completed Successfully</label>
                 </value>
                 <value>
                     <fullName>Completed with Errors</fullName>
                     <default>false</default>
+                    <label>Completed with Errors</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -372,50 +377,62 @@ copado__SUM_Deployed__c / copado__Org_Count__c,
                 <value>
                     <fullName>MetaData</fullName>
                     <default>true</default>
+                    <label>MetaData</label>
                 </value>
                 <value>
                     <fullName>Full Profiles</fullName>
                     <default>false</default>
+                    <label>Full Profiles</label>
                 </value>
                 <value>
                     <fullName>Full Permission Sets</fullName>
                     <default>false</default>
+                    <label>Full Permission Sets</label>
                 </value>
                 <value>
                     <fullName>Users</fullName>
                     <default>false</default>
+                    <label>Users</label>
                 </value>
                 <value>
                     <fullName>Translations</fullName>
                     <default>false</default>
+                    <label>Translations</label>
                 </value>
                 <value>
                     <fullName>Data</fullName>
                     <default>false</default>
+                    <label>Data</label>
                 </value>
                 <value>
                     <fullName>Bulk Data</fullName>
                     <default>false</default>
+                    <label>Bulk Data</label>
                 </value>
                 <value>
                     <fullName>Delete MetaData</fullName>
                     <default>false</default>
+                    <label>Delete MetaData</label>
                 </value>
                 <value>
                     <fullName>Custom Settings</fullName>
                     <default>false</default>
+                    <label>Custom Settings</label>
                 </value>
                 <value>
                     <fullName>Apex</fullName>
                     <default>false</default>
+                    <label>Apex</label>
                 </value>
                 <value>
                     <fullName>Git MetaData</fullName>
                     <default>false</default>
+                    <label>Git MetaData</label>
                 </value>
                 <value>
                     <fullName>URL Callout</fullName>
                     <default>false</default>
+                    <label>URL Callout</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -462,4 +479,5 @@ In production this field should be HIDDEN</description>
         <lookupDialogsAdditionalFields>copado__CheckOnly__c</lookupDialogsAdditionalFields>
     </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
 </CustomObject>
