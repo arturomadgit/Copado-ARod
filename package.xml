@@ -460,6 +460,9 @@
     <members>AgentWork.PushTimeout</members>
     <members>AgentWork.PushTimeoutDateTime</members>
     <members>AgentWork.RequestDateTime</members>
+    <members>AgentWork.RoutingModel</members>
+    <members>AgentWork.RoutingPriority</members>
+    <members>AgentWork.RoutingType</members>
     <members>AgentWork.ServiceChannelId</members>
     <members>AgentWork.ShouldSkipCapacityCheck</members>
     <members>AgentWork.SpeedToAnswer</members>
@@ -1345,6 +1348,16 @@
     <members>OrderItem.SystemModstamp</members>
     <members>OrderItem.TotalPrice</members>
     <members>OrderItem.UnitPrice</members>
+    <members>OrgDeleteRequest.CreatedById</members>
+    <members>OrgDeleteRequest.CreatedDate</members>
+    <members>OrgDeleteRequest.Id</members>
+    <members>OrgDeleteRequest.IsDeleted</members>
+    <members>OrgDeleteRequest.LastModifiedById</members>
+    <members>OrgDeleteRequest.LastModifiedDate</members>
+    <members>OrgDeleteRequest.Name</members>
+    <members>OrgDeleteRequest.OwnerId</members>
+    <members>OrgDeleteRequest.RequestType</members>
+    <members>OrgDeleteRequest.SystemModstamp</members>
     <members>OrgLifecycleNotification.CreatedById</members>
     <members>OrgLifecycleNotification.CreatedDate</members>
     <members>OrgLifecycleNotification.LifecycleRequestId</members>
@@ -1366,6 +1379,8 @@
     <members>Partner.ReversePartnerId</members>
     <members>Partner.Role</members>
     <members>Partner.SystemModstamp</members>
+    <members>PendingServiceRouting.CapacityPercentage</members>
+    <members>PendingServiceRouting.CapacityWeight</members>
     <members>PendingServiceRouting.CreatedById</members>
     <members>PendingServiceRouting.CreatedDate</members>
     <members>PendingServiceRouting.CustomRequestedDateTime</members>
@@ -1373,6 +1388,7 @@
     <members>PendingServiceRouting.IsDeleted</members>
     <members>PendingServiceRouting.IsPushAttempted</members>
     <members>PendingServiceRouting.IsPushed</members>
+    <members>PendingServiceRouting.IsReadyForRouting</members>
     <members>PendingServiceRouting.IsTransfer</members>
     <members>PendingServiceRouting.LastDeclinedAgentSession</members>
     <members>PendingServiceRouting.LastModifiedById</members>
@@ -1381,6 +1397,8 @@
     <members>PendingServiceRouting.OwnerId</members>
     <members>PendingServiceRouting.QueueId</members>
     <members>PendingServiceRouting.RoutingModel</members>
+    <members>PendingServiceRouting.RoutingPriority</members>
+    <members>PendingServiceRouting.RoutingType</members>
     <members>PendingServiceRouting.Serial</members>
     <members>PendingServiceRouting.ServiceChannelId</members>
     <members>PendingServiceRouting.SystemModstamp</members>
@@ -1625,6 +1643,7 @@
     <members>User.UserPreferencesFavoritesWTShown</members>
     <members>User.UserPreferencesGlobalNavBarWTShown</members>
     <members>User.UserPreferencesGlobalNavGridMenuWTShown</members>
+    <members>User.UserPreferencesHasCelebrationBadge</members>
     <members>User.UserPreferencesHideBiggerPhotoCallout</members>
     <members>User.UserPreferencesHideCSNDesktopTask</members>
     <members>User.UserPreferencesHideCSNGetChatterMobileTask</members>
@@ -1637,6 +1656,7 @@
     <members>User.UserPreferencesJigsawListUser</members>
     <members>User.UserPreferencesLightningExperiencePreferred</members>
     <members>User.UserPreferencesPathAssistantCollapsed</members>
+    <members>User.UserPreferencesPreviewCustomTheme</members>
     <members>User.UserPreferencesPreviewLightning</members>
     <members>User.UserPreferencesRecordHomeReservedWTShown</members>
     <members>User.UserPreferencesRecordHomeSectionCollapseWTShown</members>
@@ -1665,6 +1685,8 @@
     <members>User.UserPreferencesShowWorkPhoneToExternalUsers</members>
     <members>User.UserPreferencesShowWorkPhoneToGuestUsers</members>
     <members>User.UserPreferencesSortFeedByComment</members>
+    <members>User.UserPreferencesSuppressEventSFXReminders</members>
+    <members>User.UserPreferencesSuppressTaskSFXReminders</members>
     <members>User.UserPreferencesTaskRemindersCheckboxDefault</members>
     <members>User.UserRoleId</members>
     <members>User.UserType</members>
@@ -3660,6 +3682,11 @@
     <name>PermissionSet</name>
   </types>
   <types>
+    <members>Cases</members>
+    <members>default_presence_config</members>
+    <name>PresenceUserConfig</name>
+  </types>
+  <types>
     <members>Admin</members>
     <members>Analytics Cloud Integration User</members>
     <members>Analytics Cloud Security User</members>
@@ -3701,6 +3728,10 @@
   <types>
     <members>Cases</members>
     <name>Queue</name>
+  </types>
+  <types>
+    <members>Cases</members>
+    <name>QueueRoutingConfig</name>
   </types>
   <types>
     <members>Case.NewChildCase</members>
@@ -3801,6 +3832,14 @@
     <name>Role</name>
   </types>
   <types>
+    <members>Cases</members>
+    <name>ServiceChannel</name>
+  </types>
+  <types>
+    <members>Available_for_Cases</members>
+    <name>ServicePresenceStatus</name>
+  </types>
+  <types>
     <members>Account</members>
     <members>Activities</members>
     <members>Address</members>
@@ -3818,6 +3857,7 @@
     <members>Macro</members>
     <members>Mobile</members>
     <members>Name</members>
+    <members>OmniChannel</members>
     <members>Opportunity</members>
     <members>Order</members>
     <members>OrgPreference</members>
@@ -4070,5 +4110,5 @@
     <members>copado__Deployment__c.copado__Deployment_scheduled</members>
     <name>WorkflowTask</name>
   </types>
-  <version>41.0</version>
+  <version>42.0</version>
 </Package>

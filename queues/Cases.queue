@@ -2,6 +2,12 @@
 <Queue xmlns="http://soap.sforce.com/2006/04/metadata">
     <doesSendEmailToMembers>false</doesSendEmailToMembers>
     <name>Cases</name>
+    <queueMembers>
+        <users>
+            <user>arturo33@gmail.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Cases</queueRoutingConfig>
     <queueSobject>
         <sobjectType>Case</sobjectType>
     </queueSobject>
