@@ -33,8 +33,4 @@
             <translation><!-- Released --></translation>
         </picklistValues>
     </fields>
-    <webLinks>
-        <label><!-- Mass_add_to_Release --></label>
-        <name>copado__Mass_add_to_Release</name>
-    </webLinks>
 </CustomObjectTranslation>
