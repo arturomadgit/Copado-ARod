@@ -517,4 +517,40 @@
         <label><!-- So that... --></label>
         <name>copado__userStory_reason__c</name>
     </fields>
+    <validationRules>
+        <errorMessage><!-- A cancellation reason must be given. --></errorMessage>
+        <name>copado__Cancellation_reason_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This User Story does not meet the required Apex coverage threshold to be promoted. --></errorMessage>
+        <name>copado__Promote_User_Story_Apex_validation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Add_Apex_Tests --></label>
+        <name>copado__Add_Apex_Tests</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Commits --></label>
+        <name>copado__Add_Commits</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Metadata --></label>
+        <name>copado__Add_Metadata</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Assign_to_Release --></label>
+        <name>copado__Assign_to_Release</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Commit_Files --></label>
+        <name>copado__Commit_Files</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Add_User_Stories --></label>
+        <name>copado__Mass_Add_User_Stories</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Add_User_Stories_Sprint --></label>
+        <name>copado__Mass_Add_User_Stories_Sprint</name>
+    </webLinks>
 </CustomObjectTranslation>

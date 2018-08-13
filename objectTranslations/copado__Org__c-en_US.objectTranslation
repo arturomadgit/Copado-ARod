@@ -134,4 +134,12 @@
         <label><!-- Validated Status --></label>
         <name>copado__Validated_Status__c</name>
     </fields>
+    <webLinks>
+        <label><!-- Add_to_Deployment --></label>
+        <name>copado__Add_to_Deployment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Validate_Org --></label>
+        <name>copado__Validate_Org</name>
+    </webLinks>
 </CustomObjectTranslation>

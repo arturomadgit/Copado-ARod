@@ -34,4 +34,16 @@
             <translation><!-- Queued --></translation>
         </picklistValues>
     </fields>
+    <webLinks>
+        <label><!-- Refresh_Results --></label>
+        <name>copado__Refresh_Results</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Run_Group --></label>
+        <name>copado__Run_Group</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Show_Hook_URL --></label>
+        <name>copado__Show_Hook_URL</name>
+    </webLinks>
 </CustomObjectTranslation>
