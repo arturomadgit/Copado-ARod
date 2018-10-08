@@ -18,7 +18,6 @@
         <members>Macro</members>
         <members>Mobile</members>
         <members>Name</members>
-        <members>OmniChannel</members>
         <members>Opportunity</members>
         <members>Order</members>
         <members>OrgPreference</members>
@@ -27,7 +26,6 @@
         <members>Quote</members>
         <members>Search</members>
         <members>Security</members>
-        <members>SocialCustomerService</members>
         <name>Settings</name>
     </types>
     <version>43.0</version>
