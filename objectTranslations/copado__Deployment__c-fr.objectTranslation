@@ -10,7 +10,7 @@
     </caseValues>
     <fieldSets>
         <label><!-- CustomFields --></label>
-        <name>CustomFields</name>
+        <name>copado__CustomFields</name>
     </fieldSets>
     <fields>
         <label><!-- Build Task --></label>
